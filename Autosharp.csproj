@@ -1,0 +1,209 @@
+1 <?xml version="1.0" encoding="utf-8"?> 
+2 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+3   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" /> 
+4   <PropertyGroup> 
+5     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration> 
+6     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform> 
+7     <ProjectGuid>{B13213B2-F9B1-492E-B930-A433218E0C86}</ProjectGuid> 
+8     <OutputType>Exe</OutputType> 
+9     <AppDesignerFolder>Properties</AppDesignerFolder> 
+10     <RootNamespace>AutoSharp</RootNamespace> 
+11     <AssemblyName>AutoSharp</AssemblyName> 
+12     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion> 
+13     <FileAlignment>512</FileAlignment> 
+14     <PublishUrl>publish\</PublishUrl> 
+15     <Install>true</Install> 
+16     <InstallFrom>Disk</InstallFrom> 
+17     <UpdateEnabled>false</UpdateEnabled> 
+18     <UpdateMode>Foreground</UpdateMode> 
+19     <UpdateInterval>7</UpdateInterval> 
+20     <UpdateIntervalUnits>Days</UpdateIntervalUnits> 
+21     <UpdatePeriodically>false</UpdatePeriodically> 
+22     <UpdateRequired>false</UpdateRequired> 
+23     <MapFileExtensions>true</MapFileExtensions> 
+24     <ApplicationRevision>0</ApplicationRevision> 
+25     <ApplicationVersion>1.0.0.%2a</ApplicationVersion> 
+26     <IsWebBootstrapper>false</IsWebBootstrapper> 
+27     <UseApplicationTrust>false</UseApplicationTrust> 
+28     <BootstrapperEnabled>true</BootstrapperEnabled> 
+29     <PreBuildEvent /> 
+30     <PostBuildEvent /> 
+31     <OutputPath>bin\Release</OutputPath> 
+32   </PropertyGroup> 
+33   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' "> 
+34     <PlatformTarget>x86</PlatformTarget> 
+35     <DebugSymbols>true</DebugSymbols> 
+36     <DebugType>full</DebugType> 
+37     <Optimize>false</Optimize> 
+38     <OutputPath>bin\Release</OutputPath> 
+39     <DefineConstants>DEBUG;TRACE</DefineConstants> 
+40     <ErrorReport>prompt</ErrorReport> 
+41     <WarningLevel>4</WarningLevel> 
+42   </PropertyGroup> 
+43   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' "> 
+44     <PlatformTarget>x86</PlatformTarget> 
+45     <DebugType>pdbonly</DebugType> 
+46     <Optimize>true</Optimize> 
+47     <OutputPath>bin\Release</OutputPath> 
+48     <DefineConstants>TRACE</DefineConstants> 
+49     <ErrorReport>prompt</ErrorReport> 
+50     <WarningLevel>4</WarningLevel> 
+51   </PropertyGroup> 
+52   <ItemGroup> 
+53     <Reference Include="clipper_library"> 
+54       <HintPath>C:\LeagueSharp\System\clipper_library.dll</HintPath> 
+55     </Reference> 
+56     <Reference Include="LeagueSharp"> 
+57       <HintPath>C:\LeagueSharp\System\LeagueSharp.dll</HintPath> 
+58     </Reference> 
+59     <Reference Include="LeagueSharp.Common"> 
+60       <HintPath>C:\LeagueSharp\System\LeagueSharp.Common.dll</HintPath> 
+61     </Reference> 
+62     <Reference Include="SharpDX"> 
+63       <HintPath>C:\LeagueSharp\System\SharpDX.dll</HintPath> 
+64     </Reference> 
+65     <Reference Include="System" /> 
+66     <Reference Include="System.Core" /> 
+67     <Reference Include="System.Drawing" /> 
+68     <Reference Include="System.Windows.Forms" /> 
+69     <Reference Include="System.Xml.Linq" /> 
+70     <Reference Include="System.Data.DataSetExtensions" /> 
+71     <Reference Include="Microsoft.CSharp" /> 
+72     <Reference Include="System.Data" /> 
+73     <Reference Include="System.Xml" /> 
+74   </ItemGroup> 
+75   <ItemGroup> 
+76     <Compile Include="Auto\Autoplay.cs" /> 
+77     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\BuyItemEvent.cs" /> 
+78     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\CustomEvents.cs" /> 
+79     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\Item.cs" /> 
+80     <Compile Include="Auto\HowlingAbyss\ARAMShopAI\Main.cs" /> 
+81     <Compile Include="Auto\HowlingAbyss\DecisionMaker.cs" /> 
+82     <Compile Include="Auto\HowlingAbyss\Decisions.cs" /> 
+83     <Compile Include="Auto\HowlingAbyss\HAManager.cs" /> 
+84     <Compile Include="Auto\SummonersRift\SRShopAI\BuyItemEvent.cs" /> 
+85     <Compile Include="Auto\SummonersRift\SRShopAI\CustomEvents.cs" /> 
+86     <Compile Include="Auto\SummonersRift\SRShopAI\Item.cs" /> 
+87     <Compile Include="Auto\SummonersRift\SRShopAI\Main.cs" /> 
+88     <Compile Include="Auto\SummonersRift\MyTeam.cs" /> 
+89     <Compile Include="Auto\SummonersRift\RoleSwitcher.cs" /> 
+90     <Compile Include="Auto\SummonersRift\Map.cs" /> 
+91     <Compile Include="Auto\SummonersRift\Shopping.cs" /> 
+92     <Compile Include="Auto\SummonersRift\SRManager.cs" /> 
+93     <Compile Include="PluginBase.cs" /> 
+94     <Compile Include="PluginLoader.cs" /> 
+95     <Compile Include="Plugins\Aatrox.cs" /> 
+96     <Compile Include="Plugins\Ahri.cs" /> 
+97     <Compile Include="Plugins\Akali.cs" /> 
+98     <Compile Include="Plugins\Alistar.cs" /> 
+99     <Compile Include="Plugins\Amumu.cs" /> 
+100     <Compile Include="Plugins\Anivia.cs" /> 
+101     <Compile Include="Plugins\Annie.cs" /> 
+102     <Compile Include="Plugins\Ashe.cs" /> 
+103     <Compile Include="Plugins\Azir.cs" /> 
+104     <Compile Include="Plugins\Bard.cs" /> 
+105     <Compile Include="Plugins\Blitzcrank.cs" /> 
+106     <Compile Include="Plugins\Brand.cs" /> 
+107     <Compile Include="Plugins\Braum.cs" /> 
+108     <Compile Include="Plugins\Caitlyn.cs" /> 
+109     <Compile Include="Plugins\Cassiopeia.cs" /> 
+110     <Compile Include="Plugins\Chogath.cs" /> 
+111     <Compile Include="Plugins\Corki.cs" /> 
+112     <Compile Include="Plugins\Darius.cs" /> 
+113     <Compile Include="Plugins\Default.cs" /> 
+114     <Compile Include="Plugins\Diana.cs" /> 
+115     <Compile Include="Plugins\Draven.cs" /> 
+116     <Compile Include="Plugins\Drmundo.cs" /> 
+117     <Compile Include="Plugins\Evelynn.cs" /> 
+118     <Compile Include="Plugins\Ezreal.cs" /> 
+119     <Compile Include="Plugins\FiddleSticks.cs" /> 
+120     <Compile Include="Plugins\Fiora.cs" /> 
+121     <Compile Include="Plugins\Fizz.cs" /> 
+122     <Compile Include="Plugins\Galio.cs" /> 
+123     <Compile Include="Plugins\Gangplank.cs" /> 
+124     <Compile Include="Plugins\Garen.cs" /> 
+125     <Compile Include="Plugins\Gragas.cs" /> 
+126     <Compile Include="Plugins\Graves.cs" /> 
+127     <Compile Include="Plugins\Hecarim.cs" /> 
+128     <Compile Include="Plugins\Heimerdinger.cs" /> 
+129     <Compile Include="Plugins\Irelia.cs" /> 
+130     <Compile Include="Plugins\Janna.cs" /> 
+131     <Compile Include="Plugins\Jax.cs" /> 
+132     <Compile Include="Plugins\Jinx.cs" /> 
+133     <Compile Include="Plugins\Kalista.cs" /> 
+134     <Compile Include="Plugins\Karma.cs" /> 
+135     <Compile Include="Plugins\Karthus.cs" /> 
+136     <Compile Include="Plugins\Katarina.cs" /> 
+137     <Compile Include="Plugins\Kayle.cs" /> 
+138     <Compile Include="Plugins\Kogmaw.cs" /> 
+139     <Compile Include="Plugins\Leblanc.cs" /> 
+140     <Compile Include="Plugins\Leona.cs" /> 
+141     <Compile Include="Plugins\Lucian.cs" /> 
+142     <Compile Include="Plugins\Lulu.cs" /> 
+143     <Compile Include="Plugins\Lux.cs" /> 
+144     <Compile Include="Plugins\Malzahar.cs" /> 
+145     <Compile Include="Plugins\Masteryi.cs" /> 
+146     <Compile Include="Plugins\Morgana.cs" /> 
+147     <Compile Include="Plugins\Nami.cs" /> 
+148     <Compile Include="Plugins\Nunu.cs" /> 
+149     <Compile Include="Plugins\Poppy.cs" /> 
+150     <Compile Include="Plugins\Riven.cs" /> 
+151     <Compile Include="Plugins\Ryze.cs" /> 
+152     <Compile Include="Plugins\Shaco.cs" /> 
+153     <Compile Include="Plugins\Sivir.cs" /> 
+154     <Compile Include="Plugins\Skarner.cs" /> 
+155     <Compile Include="Plugins\Sona.cs" /> 
+156     <Compile Include="Plugins\Soraka.cs" /> 
+157     <Compile Include="Plugins\Taric.cs" /> 
+158     <Compile Include="Plugins\Teemo.cs" /> 
+159     <Compile Include="Plugins\Thresh.cs" /> 
+160     <Compile Include="Plugins\Tristana.cs" /> 
+161     <Compile Include="Plugins\Varus.cs" /> 
+162     <Compile Include="Plugins\Vayne.cs" /> 
+163     <Compile Include="Plugins\Veigar.cs" /> 
+164     <Compile Include="Plugins\Vladimir.cs" /> 
+165     <Compile Include="Plugins\Warwick.cs" /> 
+166     <Compile Include="Plugins\Xerath.cs" /> 
+167     <Compile Include="Plugins\Zilean.cs" /> 
+168     <Compile Include="Plugins\Zyra.cs" /> 
+169     <Compile Include="Program.cs" /> 
+170     <Compile Include="Properties\AssemblyInfo.cs" /> 
+171     <Compile Include="Utils\AutoLevel.cs" /> 
+172     <Compile Include="Utils\Cache.cs" /> 
+173     <Compile Include="Utils\Enums.cs" /> 
+174     <Compile Include="Utils\Helpers.cs" /> 
+175     <Compile Include="Utils\Orbwalker.cs" /> 
+176     <Compile Include="Utils\Positioning.cs" /> 
+177     <Compile Include="Utils\Wizard.cs" /> 
+178     <Compile Include="Utils\Geometry.cs" /> 
+179   </ItemGroup> 
+180   <ItemGroup> 
+181     <None Include="App.config" /> 
+182   </ItemGroup> 
+183   <ItemGroup /> 
+184   <ItemGroup> 
+185     <BootstrapperPackage Include=".NETFramework,Version=v4.5"> 
+186       <Visible>False</Visible> 
+187       <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName> 
+188       <Install>true</Install> 
+189     </BootstrapperPackage> 
+190     <BootstrapperPackage Include="Microsoft.Net.Client.3.5"> 
+191       <Visible>False</Visible> 
+192       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName> 
+193       <Install>false</Install> 
+194     </BootstrapperPackage> 
+195     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1"> 
+196       <Visible>False</Visible> 
+197       <ProductName>.NET Framework 3.5 SP1</ProductName> 
+198       <Install>false</Install> 
+199     </BootstrapperPackage> 
+200   </ItemGroup> 
+201   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> 
+202   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.  
+203        Other similar extension points exist, see Microsoft.Common.targets. 
+204   <Target Name="BeforeBuild"> 
+205   </Target> 
+206   <Target Name="AfterBuild"> 
+207   </Target> 
+208   --> 
+209 </Project> 
